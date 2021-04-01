@@ -1,77 +1,17 @@
-﻿class Numbers
+﻿using System;
+
+namespace Overloading
 {
-    public int findMinimum(int a, int b)
+    class Program
     {
-        if (a < b)
+        static void Main(string[] args)
         {
-            return a;
-        }
-        else
-        {
-            return b;
-        }
-
-    }
-    public int findMinimum(int a, int b, float c)
-    {
-
-        if (a < b)
-        {
-            if (a < c)
-            {
-                return a;
-            }
-            else
-            {
-                return (int)c;
-            }
-        }
-        else
-        {
-            if (b < c)
-            {
-                return b;
-            }
-            else
-            {
-                return (int)c;
-            }
-        }
-    }
-    public int findMaximum(int a, int b)
-    {
-        if (a > b)
-        {
-            return a;
-        }
-        else
-        {
-            return b;
-        }
-    }
-    public int findMaximum(int a, int b, float c)
-    {
-        if (a > b)
-        {
-            if (a > c)
-            {
-                return a;
-            }
-            else
-            {
-                return (int)c;
-            }
-        }
-        else
-        {
-            if (b > c)
-            {
-                return b;
-            }
-            else
-            {
-                return (int)c;
-            }
+            Numbers number = new Numbers();
+            Console.WriteLine("Minimum #1: {0}", number.findMinimum(3, 1));
+            Console.WriteLine("Minimum #2: {0}", number.findMinimum(3, 2, 4));
+            Console.WriteLine();
+            Console.WriteLine("Maximum #1: {0}", number.findMaximum(3, 1));
+            Console.WriteLine("Maximum #2: {0}", number.findMaximum(3, 2, 4));
         }
     }
 }
